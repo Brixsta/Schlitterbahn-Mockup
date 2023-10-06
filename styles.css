@@ -1,0 +1,520 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Lato", sans-serif;
+  user-select: none;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+header {
+  width: 100%;
+  height: 30rem;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("images/2.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  flex-wrap: wrap;
+}
+
+.call-to-action {
+  color: #00a8ff;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  margin-left: 4rem;
+}
+
+.call-to-action h1 {
+  margin-bottom: 1rem;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.call-to-action h2 {
+  margin-bottom: 1rem;
+}
+
+.call-to-action button {
+  display: inline;
+  text-align: center;
+  background-color: blue;
+  color: white;
+  padding: 0.8rem 2.5rem;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  width: 13rem;
+  margin-top: 2rem;
+}
+
+.call-to-action button:hover {
+  text-decoration: underline;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  background-color: #00a8ff;
+}
+
+.nav-item {
+  list-style-type: none;
+  padding: 2rem 0rem;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+}
+
+.nav-link {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: white;
+  letter-spacing: 1px;
+}
+
+/************************ DESCRIPTION SECTION **************************/
+
+.description {
+  width: 100%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 5rem 5rem;
+  flex-wrap: wrap;
+}
+
+.description p {
+  line-height: 1.5;
+  font-size: 16pt;
+}
+
+.description h2 {
+  text-transform: uppercase;
+  font-size: 3rem;
+}
+
+.description h2:nth-child(1) {
+  color: blue;
+}
+
+.description h2:nth-child(2) {
+  margin-bottom: 3rem;
+}
+
+.description-location {
+  color: #00a8ff;
+  margin-bottom: 1rem;
+}
+
+.description-classification {
+  color: #00a8ff;
+  margin-bottom: 2rem;
+}
+
+/***********************************************************************/
+
+/********************* ATTRACTIONS SECTION *****************************/
+
+.attractions {
+  display: flex;
+  gap: 5rem;
+  padding: 5rem 0rem;
+  justify-content: center;
+  align-items: center;
+  background-color: #00a8ff;
+  position: relative;
+  flex-wrap: wrap;
+}
+
+.attractions-card {
+  width: 25rem;
+  cursor: pointer;
+  border-radius: 30px;
+  transition: all ease-in-out 0.5s;
+  position: relative;
+}
+
+.attractions-card::before {
+  content: "";
+  height: 38rem;
+  width: 25rem;
+  background-color: blue;
+  position: absolute;
+  border-radius: 30px;
+  top: 0;
+  left: 0;
+  transition: all cubic-bezier(1, 0, 0, 1) 0.2s;
+}
+
+.attractions-card:hover {
+  transform: translate(-1rem, -1rem);
+}
+
+.attractions-card:hover::before {
+  left: 1rem;
+  top: 1rem;
+}
+
+.attractions-card-text {
+  padding: 2rem;
+  position: relative;
+  height: 18rem;
+  background-color: white;
+  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+
+.attractions-card-text h2 {
+  color: #00a8ff;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.attractions-card-text h3 {
+  color: blue;
+  position: absolute;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.attractions-card p {
+  line-height: 1.5;
+  font-size: 14pt;
+  margin-bottom: 1rem;
+}
+
+.attractions-card-img-1 {
+  background-image: url("images/resort.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 20rem;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+  z-index: 100;
+  position: relative;
+}
+
+.attractions-card-img-2 {
+  background-image: url("images/team.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 20rem;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+  z-index: 100;
+  position: relative;
+}
+
+.attractions-card-img-3 {
+  background-image: url("images/water-slide.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 20rem;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+  z-index: 100;
+  position: relative;
+}
+
+.attractions i {
+  position: absolute;
+  bottom: 1rem;
+  right: 1.5rem;
+  color: white;
+  font-size: 3rem;
+  background-color: #00a8ff;
+  height: 4rem;
+  width: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+/***********************************************************************/
+
+/********************* KIDS AREA *****************************/
+.kids-area {
+  height: 50rem;
+  width: 100%;
+  display: flex;
+  padding: 5rem;
+  flex-wrap: wrap;
+}
+
+.kids-area-text {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.kids-area-text h2 {
+  font-size: 4rem;
+  color: #00a8ff;
+  margin-bottom: 0.5rem;
+}
+
+.kids-area-text span {
+  color: blue;
+}
+
+.kids-area-text p {
+  padding: 2rem 5rem;
+  font-size: 16pt;
+  line-height: 1.5;
+}
+
+.kids-area img {
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.kids-area button {
+  display: inline;
+  text-align: center;
+  background-color: blue;
+  color: white;
+  padding: 0.8rem 2.5rem;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  width: 13rem;
+  margin-top: 2rem;
+  text-transform: uppercase;
+}
+
+.kids-area button:hover {
+  text-decoration: underline;
+}
+/***********************************************************************/
+
+/********************* DEALS *****************************/
+
+.deals {
+  padding: 5rem;
+  background-color: #00a8ff;
+  gap: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  flex-wrap: wrap;
+}
+
+.deals-card {
+  width: 25rem;
+  border-radius: 30px;
+  background-color: white;
+  cursor: pointer;
+  transition: transform ease-in-out 0.4s;
+}
+
+.deals-card:hover {
+  transform: scale(1.1);
+}
+
+.deals-card-text {
+  padding: 2rem;
+  position: relative;
+  height: 16rem;
+  background-color: white;
+  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+
+.deals-card-text p {
+  line-height: 1.5;
+  font-size: 14pt;
+  margin-bottom: 1rem;
+}
+
+.deals-card-text h2 {
+  color: #00a8ff;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.deals-card-img-1 {
+  background-position: center;
+  background-image: url("images/fastlane.jpg");
+  background-size: cover;
+  height: 15rem;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+}
+
+.deals-card-img-2 {
+  background-position: center;
+  background-image: url("images/burgers.jpg");
+  background-size: cover;
+  height: 15rem;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+}
+
+.deals-card-img-3 {
+  background-position: center;
+  background-image: url("images/fun-pix.jpg");
+  background-size: cover;
+  height: 15rem;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+}
+
+.deals-button {
+  background-color: #00a8ff;
+  color: white;
+  padding: 2rem;
+  border: none;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  cursor: pointer;
+  width: 2rem;
+  height: 2rem;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 1rem;
+}
+
+/***********************************************************************/
+
+/********************* MAP *****************************/
+.map {
+  width: 100%;
+  background-color: white;
+  padding: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/***********************************************************************/
+
+/********************* FOOTER *****************************/
+
+footer {
+  background-color: #00a8ff;
+  padding: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer li {
+  list-style-type: none;
+  margin-bottom: 0.5rem;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+footer h2 {
+  color: white;
+  padding: 1rem 0rem;
+  background-color: blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: inline;
+  margin-bottom: 1rem;
+}
+
+.tickets-and-passes {
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.tickets-and-passes h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.rides-and-experiences {
+  width: 20%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+}
+
+.rides-and-experiences h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.places-to-stay {
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.places-to-stay h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.quick-links {
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.quick-links h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/***********************************************************************/
